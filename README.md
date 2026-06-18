@@ -1,10 +1,21 @@
 # Amplify Fusion - Unstructured to Structured Classifer
 
-An Amplify Fusion unstructured data to structured data classifer demonstration.
+An Amplify Fusion unstructured data to structured data classifer demonstration implemented as follows:
 
-Invoice, contract and receipt PDF files are ingested by SFTP, converted to text using LlamaParse and then classified and converted to predefined schema by an LLM. Finally the data is inserted into a database for reporting and downstream processing/usage.
+* Invoice, contract and receipt PDF files are ingested by SFTP
+* PDF is converted to text using [LlamaParse](https://www.llamaindex.ai/)
+* Text classified and converted to predefined schema by a [Grok](https://groq.com/) `llama-3.1-8b-instant` LLM using the Fusion OpenAI Connector
+* Structured data is inserted into a [Neon Postgres](https://neon.com/) database for reporting and downstream processing/usage
 
-The Fusion project export, LLM prompt and test sample files are all incuded.
+The Fusion project export, LLM prompt and test PDF sample files are all incuded.
+
+## How to Use
+
+* Download repo
+* Import the `Unstr2StructClassifier.zip` project export into your Fusion tenant
+* Configure connection with your credentials for LlamaParse and Neon Postgres
+* Set Postgres Table using SQL below
+* Use an SFTP client such FileZilla to upload pdf files to Fusion
 
 ## Postgres DB
 
