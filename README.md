@@ -5,6 +5,7 @@ An Amplify Fusion unstructured data to structured data classifer demonstration i
 * Invoice, contract and receipt PDF files are ingested by SFTP
 * PDF is converted to text using [LlamaParse](https://www.llamaindex.ai/)
 * Text classified and converted to predefined schema by a [Grok](https://groq.com/) `llama-3.1-8b-instant` LLM using the Fusion OpenAI Connector
+* Data is written to an API (Webhook.site)
 * Structured data is inserted into a [Neon Postgres](https://neon.com/) database for reporting and downstream processing/usage
 
 The Fusion project export, LLM prompt and test PDF sample files are all incuded.
