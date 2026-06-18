@@ -1,4 +1,4 @@
-# Amplify Fusion - Unstructured to Structured Classifer
+# Amplify Fusion - Unstructured Data to Structured Data Classifer
 
 An Amplify Fusion unstructured data to structured data classifer demonstration implemented as follows:
 
