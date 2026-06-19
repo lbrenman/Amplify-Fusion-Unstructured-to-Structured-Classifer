@@ -8,6 +8,8 @@ An Amplify Fusion unstructured data to structured data classifer demonstration i
 * Data is written to an API (Webhook.site)
 * Structured data is inserted into a [Neon Postgres](https://neon.com/) database for reporting and downstream processing/usage
 
+    ![Image](images/diagram.png)
+
 The Fusion project export, LLM prompt and test PDF sample files are all incuded.
 
 ## How to Use
@@ -259,3 +261,20 @@ The Fusion project export, LLM prompt and test PDF sample files are all incuded.
     GROUP BY party_name
     ORDER BY total_billed DESC;
     ```
+
+## Screen Shots
+
+* Upload PDF to SFTP
+  ![Image](images/1.png)
+
+* POST to API
+  ![Image](images/2.png)
+
+* Insert to DB
+  ![Image](images/3.png)
+  ![Image](images/4.png)
+  ![Image](images/5.png)
+
+* Analyze Structured Data
+  ![Image](images/6.png)
+  ![Image](images/7.png)
