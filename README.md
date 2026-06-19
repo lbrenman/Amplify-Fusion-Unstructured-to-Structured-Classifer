@@ -2,7 +2,7 @@
 
 An Amplify Fusion unstructured data to structured data classifer demonstration implemented as follows:
 
-* Invoice, contract and receipt PDF files are ingested by SFTP
+* Invoice, contract and receipt PDF files are ingested by SFTP OR S3 SQS listener
 * PDF is converted to text using [LlamaParse](https://www.llamaindex.ai/)
 * Text classified and converted to predefined schema by a [Grok](https://groq.com/) `llama-3.1-8b-instant` LLM using the Fusion OpenAI Connector
 * Data is written to an API (Webhook.site)
