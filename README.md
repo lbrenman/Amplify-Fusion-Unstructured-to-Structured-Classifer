@@ -14,6 +14,8 @@ The Fusion project export, LLM prompt and test PDF sample files are all incuded.
 
 A web based dashboard for viewing the structured results in Postgres as well as upload files via S3 and SFTP (for demo purpses) is available [here](https://github.com/lbrenman/doc-classifier-dashboard)
 
+If you choose to host your own PDF parser, based on the Open Source version of LlamaParse, called [LiteParse](https://github.com/run-llama/liteparse), this [project](https://github.com/lbrenman/liteparse-api) can help you spin it up quickly for testing. Note that you will need to update the LlamaParse REST API calls to point to different API endpoints.
+
 ## How to Use
 
 * Download repo
