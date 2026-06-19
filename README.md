@@ -12,6 +12,8 @@ An Amplify Fusion unstructured data to structured data classifer demonstration i
 
 The Fusion project export, LLM prompt and test PDF sample files are all incuded.
 
+A web based dashboard for viewing the structured results in Postgres as well as upload files via S3 and SFTP (for demo purpses) is available [here](https://github.com/lbrenman/doc-classifier-dashboard)
+
 ## How to Use
 
 * Download repo
