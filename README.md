@@ -1,6 +1,12 @@
 # Amplify Fusion - Unstructured Data to Structured Data Classifer
 
-An Amplify Fusion unstructured data to structured data classifer demonstration implemented as follows:
+An Amplify Fusion Unstructured Document Intelligence demonstration. This project demonstrates an end-to-end pipeline for automatically classifying and extracting structured data from unstructured business documents — invoices, contracts, and receipts — eliminating manual data entry and enabling downstream automation.
+
+PDF documents are ingested via S3 or SFTP and orchestrated by Axway Amplify Fusion, which manages the multi-step flow. LlamaParse handles the first stage — converting raw PDF files into clean, readable text. This is a deliberate architectural decision: PDF-to-text extraction is a hard problem on its own, involving layout parsing, table reconstruction, and OCR for scanned documents. LlamaParse is purpose-built for this, using vision-language models to preserve document structure in a way that generic text extraction cannot.
+
+Once clean text is available, it is passed to the LLM for classification and structured extraction. This separation is intentional — by the time the LLM receives the input, it is working with clean, well-formed text rather than raw PDF bytes. The LLM is then free to focus entirely on understanding the document semantics: what type of document is it, who are the parties, what are the key fields, and how do they map to a predefined JSON schema. The result is a strongly-typed JSON blob that is inserted directly into a PostgreSQL database alongside promoted scalar fields for efficient querying.
+
+Major Steps are:
 
 * Invoice, contract and receipt PDF files are ingested by SFTP OR S3 SQS listener
 * PDF is converted to text using [LlamaParse](https://www.llamaindex.ai/)
